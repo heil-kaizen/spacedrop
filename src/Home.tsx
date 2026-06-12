@@ -181,21 +181,21 @@ export function Home() {
           <div className="grid md:grid-cols-4 gap-6 font-mono">
             <Card className="space-y-4 col-span-1 border-white/10 hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-all group">
                <div className="text-6xl font-black opacity-10 group-hover:opacity-40 transition-opacity">01</div>
-               <h3 className="font-black text-white uppercase tracking-widest text-sm group-hover:text-blue-400 transition-colors">Trade Happens</h3>
+               <h3 className="font-black text-white uppercase tracking-widest text-sm group-hover:text-neutral-300 transition-colors">Trade Happens</h3>
                <p className="text-sm text-neutral-400 leading-relaxed group-hover:text-white transition-colors">
                  Every buy/sell routes a slice into the engine via smart contract protocol. Volume feeds the machine.
                </p>
             </Card>
             <Card className="space-y-4 col-span-1 border-white/10 hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-all group">
                <div className="text-6xl font-black opacity-10 group-hover:opacity-40 transition-opacity">02</div>
-               <h3 className="font-black text-white uppercase tracking-widest text-sm group-hover:text-blue-400 transition-colors">Engine Buys SPCX</h3>
+               <h3 className="font-black text-white uppercase tracking-widest text-sm group-hover:text-neutral-300 transition-colors">Engine Buys SPCX</h3>
                <p className="text-sm text-neutral-400 leading-relaxed group-hover:text-white transition-colors">
                  The treasury takes those routed fees and market-buys tokenized SPCX directly on Solana DEXs.
                </p>
             </Card>
             <Card className="space-y-4 col-span-1 border-white/10 hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-all group">
                <div className="text-6xl font-black opacity-10 group-hover:opacity-40 transition-opacity">03</div>
-               <h3 className="font-black text-white uppercase tracking-widest text-sm flex justify-between items-start group-hover:text-blue-400 transition-colors">
+               <h3 className="font-black text-white uppercase tracking-widest text-sm flex justify-between items-start group-hover:text-neutral-300 transition-colors">
                  Holders Paid 
                </h3>
                <p className="text-sm text-neutral-400 leading-relaxed group-hover:text-white transition-colors">
@@ -204,7 +204,7 @@ export function Home() {
             </Card>
             <Card className="space-y-4 col-span-1 border-white/10 hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-all group">
                <div className="text-6xl font-black opacity-10 group-hover:opacity-40 transition-opacity">04</div>
-               <h3 className="font-black text-white uppercase tracking-widest text-sm flex justify-between items-start group-hover:text-blue-400 transition-colors">
+               <h3 className="font-black text-white uppercase tracking-widest text-sm flex justify-between items-start group-hover:text-neutral-300 transition-colors">
                  Loop Compounds 
                </h3>
                <p className="text-sm text-neutral-400 leading-relaxed group-hover:text-white transition-colors">
