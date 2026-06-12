@@ -1,0 +1,6 @@
+{
+  "name": "Infinite Rewards",
+  "description": "Infinite Rewards -> Destination: Orbit. Hold $SPACEDROP, earn tokenized $SPCX.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
