@@ -28,7 +28,7 @@ export function Home() {
 
   useEffect(() => {
     // Fetch token data via our proxy
-    fetch(`/api/token-info/${CONTRACT_ADDRESS}`)
+    fetch(`https://api.dexscreener.com/latest/dex/tokens/${CONTRACT_ADDRESS}`)
       .then((res) => res.json())
       .then((data) => {
         if (data && data.pairs && data.pairs.length > 0) {
