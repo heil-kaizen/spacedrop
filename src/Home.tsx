@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Copy, Rocket, Activity, Box, Users, ChevronRight, Terminal, Twitter } from "lucide-react";
+import { Copy, Rocket, Activity, Box, Users, ChevronRight, Terminal } from "lucide-react";
 import { Card } from "./components/ui/card";
 import { Button } from "./components/ui/button";
 import { Starfield } from "./components/Starfield";
@@ -73,7 +73,9 @@ export function Home() {
             Docs
           </Link>
           <a href="https://x.com/SpaceDroponSOL" target="_blank" rel="noopener noreferrer" className="text-white hover:text-neutral-300 transition-colors">
-            <Twitter className="w-5 h-5 sm:w-5 sm:h-5 fill-current" />
+            <svg viewBox="0 0 24 24" className="w-5 h-5 sm:w-5 sm:h-5 fill-current" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
           </a>
           <div className="relative group cursor-pointer ml-1 sm:ml-2" onClick={handleCopy}>
             <div className="absolute inset-0 bg-white/20 rounded-full blur-md group-hover:bg-white/30 transition-all"></div>
