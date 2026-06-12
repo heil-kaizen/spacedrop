@@ -6,7 +6,7 @@ import { Button } from "./components/ui/button";
 import { Starfield } from "./components/Starfield";
 import { cn } from "./utils";
 
-const CONTRACT_ADDRESS = "coming soon";
+const CONTRACT_ADDRESS = "FB2W73DapKJwqscJ4pLZn2CyYrgMrWsafSoRbD7hpump";
 
 interface TokenData {
   priceUsd?: string;
@@ -66,8 +66,7 @@ export function Home() {
       {/* Header */}
       <header className="container mx-auto px-6 py-6 flex justify-between items-center relative z-10 border-b border-white/5 mb-8">
         <Link to="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
-          <img src="https://raw.githubusercontent.com/heil-kaizen/spacedrop/main/spacedrop-logo-png.png" alt="Logo" className="w-14 h-14 object-contain" />
-          <img src="https://raw.githubusercontent.com/heil-kaizen/spacedrop/main/spacedrop-wordmark.png" alt="SPACEDROP" className="h-8 mt-1 object-contain" />
+          <img src="https://raw.githubusercontent.com/heil-kaizen/spacedrop/main/spacedrop-wordmark.png" alt="SPACEDROP" className="h-10 mt-1 object-contain" />
         </Link>
       </header>
 
