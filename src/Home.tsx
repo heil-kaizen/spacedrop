@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Copy, Rocket, Activity, Box, Users, ChevronRight, Terminal } from "lucide-react";
+import { Copy, Rocket, Activity, Box, Users, ChevronRight, Terminal, Gift, Check } from "lucide-react";
 import { Card } from "./components/ui/card";
 import { Button } from "./components/ui/button";
 import { Starfield } from "./components/Starfield";
@@ -25,6 +25,7 @@ export function Home() {
   const [tokenData, setTokenData] = useState<TokenData | null>(null);
   const [adminData, setAdminData] = useState<AdminData | null>(null);
   const [copied, setCopied] = useState(false);
+  const [airdropRequested, setAirdropRequested] = useState(false);
 
   useEffect(() => {
     // Fetch token data via our proxy
@@ -48,6 +49,11 @@ export function Home() {
     navigator.clipboard.writeText(CONTRACT_ADDRESS);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleAirdropSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setAirdropRequested(true);
   };
 
   const formatCurrency = (val?: number) => {
@@ -220,6 +226,61 @@ export function Home() {
                <p className="text-sm text-neutral-400 leading-relaxed group-hover:text-white transition-colors">
                  More volume &rarr; more buybacks &rarr; more rewards &rarr; to infinity.
                </p>
+            </Card>
+          </div>
+        </section>
+
+        {/* Airdrop Request Section */}
+        <section className="py-24 border-t border-white/10">
+          <div className="max-w-2xl mx-auto">
+            <Card className="p-8 border-white/10 bg-black/50 backdrop-blur-md relative overflow-hidden">
+              <div className="relative z-10 space-y-6">
+                <div className="text-center space-y-2">
+                  <h2 className="font-mono text-2xl font-black tracking-widest text-white uppercase flex items-center justify-center gap-3">
+                    <Gift className="w-6 h-6 text-green-500" />
+                    Request Direct Airdrop
+                  </h2>
+                  <p className="text-sm text-neutral-400 font-mono">Select your preferred stock reserve and enter your wallet address. We will airdrop it directly.</p>
+                </div>
+
+                {!airdropRequested ? (
+                  <form onSubmit={handleAirdropSubmit} className="space-y-4">
+                    <div className="space-y-2">
+                      <label className="font-mono text-xs font-bold text-neutral-500 uppercase tracking-widest">Select Stock</label>
+                      <select 
+                        required
+                        className="w-full bg-black border border-white/10 rounded-md p-3 font-mono text-white text-sm focus:outline-none focus:border-white/50 transition-colors"
+                      >
+                        <option value="" className="text-neutral-500">Choose a stock...</option>
+                        <option value="SPCX">SPCX (SpaceX)</option>
+                        <option value="TSLA">TSLA (Tesla)</option>
+                        <option value="NVDA">NVDA (NVIDIA)</option>
+                        <option value="MSTR">MSTR (MicroStrategy)</option>
+                      </select>
+                    </div>
+                    <div className="space-y-2">
+                      <label className="font-mono text-xs font-bold text-neutral-500 uppercase tracking-widest">Wallet Address (Solana)</label>
+                      <input 
+                        required
+                        type="text" 
+                        placeholder="Enter your SOL address..."
+                        className="w-full bg-black border border-white/10 rounded-md p-3 font-mono text-white text-sm focus:outline-none focus:border-white/50 transition-colors placeholder:text-neutral-600"
+                      />
+                    </div>
+                    <Button type="submit" className="w-full font-mono font-bold tracking-widest h-12 border border-white/10 bg-white text-black hover:bg-neutral-200 uppercase mt-4">
+                      Submit Wallet
+                    </Button>
+                  </form>
+                ) : (
+                  <div className="py-8 text-center space-y-4">
+                    <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto border border-green-500/20">
+                      <Check className="w-8 h-8 text-green-500" />
+                    </div>
+                    <h3 className="font-mono text-xl font-black text-white uppercase tracking-widest">Request Logged</h3>
+                    <p className="font-mono text-neutral-400 text-sm">Your wallet has been submitted for the next airdrop wave.</p>
+                  </div>
+                )}
+              </div>
             </Card>
           </div>
         </section>
