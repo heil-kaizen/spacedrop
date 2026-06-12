@@ -66,8 +66,8 @@ export function Home() {
       {/* Header */}
       <header className="container mx-auto px-6 py-6 flex justify-between items-center relative z-10 border-b border-white/5 mb-8">
         <Link to="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
-          <img src="https://raw.githubusercontent.com/heil-kaizen/spacedrop/main/spacedrop.png" alt="Logo" className="w-10 h-10 object-contain" />
-          <img src="https://raw.githubusercontent.com/heil-kaizen/spacedrop/main/spacedrop-wordmark.png" alt="SPACEDROP" className="h-6 mt-1 object-contain" />
+          <img src="https://raw.githubusercontent.com/heil-kaizen/spacedrop/main/spacedrop-logo-png.png" alt="Logo" className="w-14 h-14 object-contain" />
+          <img src="https://raw.githubusercontent.com/heil-kaizen/spacedrop/main/spacedrop-wordmark.png" alt="SPACEDROP" className="h-8 mt-1 object-contain" />
         </Link>
       </header>
 
