@@ -13,7 +13,7 @@ export function Button({
       className={cn(
         "inline-flex items-center justify-center rounded-sm px-4 py-2 text-sm font-mono font-medium transition-colors focus:outline-hidden",
         {
-          "bg-white text-black hover:bg-neutral-200": variant === "default",
+          "bg-white text-[#0b0913] hover:bg-neutral-200": variant === "default",
           "border border-white/20 bg-transparent text-white hover:bg-white/10":
             variant === "outline",
           "bg-transparent text-white hover:bg-white/10": variant === "ghost",
