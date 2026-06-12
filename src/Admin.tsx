@@ -163,11 +163,9 @@ export function Admin() {
     return (
       <div className="min-h-screen bg-transparent flex items-center justify-center p-6 text-white font-mono relative overflow-hidden">
         <Starfield />
-        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-blue-900/20 blur-[150px] rounded-full pointer-events-none z-0" />
-        <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-purple-900/20 blur-[150px] rounded-full pointer-events-none z-0" />
 
         <div className="relative z-10 w-full max-w-md">
-          <Card className="w-full space-y-6 bg-black/40 border-white/20">
+          <Card className="w-full space-y-6 bg-white/5 border-white/20 p-6">
             <div className="space-y-2">
               <h1 className="text-2xl font-black uppercase tracking-widest text-white">Admin Access</h1>
               <p className="text-sm font-bold text-neutral-400">Enter clearance code to access mission control.</p>
@@ -178,10 +176,10 @@ export function Admin() {
                 placeholder="PASSWORD"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full bg-black/50 border-2 border-white/20 rounded-sm px-4 py-3 text-sm font-bold focus:outline-none focus:border-white transition-colors"
+                className="w-full bg-white/5 border-2 border-white/20 rounded-sm px-4 py-3 text-sm font-bold focus:outline-none focus:border-white transition-colors"
                 autoFocus
               />
-              <Button type="submit" className="w-full font-black uppercase tracking-widest h-12 bg-white text-black hover:bg-neutral-200" disabled={loading}>
+              <Button type="submit" className="w-full font-black uppercase tracking-widest h-12 bg-white text-[#0b0913] hover:bg-neutral-200" disabled={loading}>
                 {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : "AUTHENTICATE"}
               </Button>
             </form>
@@ -197,8 +195,6 @@ export function Admin() {
   return (
     <div className="min-h-screen bg-transparent text-neutral-300 font-mono p-6 relative overflow-hidden">
       <Starfield />
-      <div className="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-blue-900/20 blur-[150px] rounded-full pointer-events-none z-0" />
-      <div className="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-purple-900/20 blur-[150px] rounded-full pointer-events-none z-0" />
 
       <div className="max-w-4xl mx-auto space-y-8 relative z-10">
         <header className="flex justify-between items-center pb-6 border-b-2 border-white/10 mb-8">
@@ -224,7 +220,7 @@ export function Admin() {
                     type="number" 
                     value={totalOverride}
                     onChange={(e) => setTotalOverride(e.target.value)}
-                    className="w-full bg-black/50 border-2 border-white/10 rounded-sm px-3 py-2 text-sm font-bold focus:outline-hidden focus:border-white transition-colors"
+                    className="w-full bg-white/5 border-2 border-white/10 rounded-sm px-3 py-2 text-sm font-bold focus:outline-hidden focus:border-white transition-colors"
                   />
                   <Button onClick={handleUpdateTotal} className="shrink-0 h-auto" disabled={loading}>
                     <Save className="w-4 h-4" />
@@ -243,7 +239,7 @@ export function Admin() {
                       required
                       value={newWallet.address}
                       onChange={(e) => setNewWallet({...newWallet, address: e.target.value})}
-                      className="w-full bg-black/50 border-2 border-white/10 rounded-sm px-3 py-2 text-sm font-bold focus:outline-hidden focus:border-white transition-colors"
+                      className="w-full bg-white/5 border-2 border-white/10 rounded-sm px-3 py-2 text-sm font-bold focus:outline-hidden focus:border-white transition-colors"
                       placeholder="Solana Address"
                     />
                   </div>
@@ -256,11 +252,11 @@ export function Admin() {
                       step="any"
                       value={newWallet.amount}
                       onChange={(e) => setNewWallet({...newWallet, amount: e.target.value})}
-                      className="w-full bg-black/50 border-2 border-white/10 rounded-sm px-3 py-2 text-sm font-bold focus:outline-hidden focus:border-white transition-colors"
+                      className="w-full bg-white/5 border-2 border-white/10 rounded-sm px-3 py-2 text-sm font-bold focus:outline-hidden focus:border-white transition-colors"
                       placeholder="0.00"
                     />
                   </div>
-                  <Button type="submit" className="w-full font-black uppercase tracking-widest h-12 bg-white text-black hover:bg-neutral-200" disabled={loading}>
+                  <Button type="submit" className="w-full font-black uppercase tracking-widest h-12 bg-white text-[#0b0913] hover:bg-neutral-200" disabled={loading}>
                     <Plus className="w-4 h-4 mr-2" /> ADD LOG
                   </Button>
                 </form>
@@ -290,7 +286,7 @@ export function Admin() {
                         <span className="text-green-400 font-black tracking-widest">+{w.amount} SPCX</span>
                         <button 
                           onClick={() => handleRemoveWallet(i)}
-                          className="text-neutral-500 hover:text-red-400 p-1 bg-black/40 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity"
+                          className="text-neutral-500 hover:text-red-400 p-1 bg-white/5 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity"
                         >
                           <Trash2 className="w-4 h-4" />
                         </button>
