@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Copy, Rocket, Activity, Box, Users, ChevronRight, Terminal } from "lucide-react";
+import { Copy, Rocket, Activity, Box, Users, ChevronRight, Terminal, Twitter } from "lucide-react";
 import { Card } from "./components/ui/card";
 import { Button } from "./components/ui/button";
 import { Starfield } from "./components/Starfield";
@@ -64,14 +64,26 @@ export function Home() {
 
 
       {/* Header */}
-      <header className="container mx-auto px-6 py-6 flex justify-between items-center relative z-10 border-b border-white/5 mb-8">
+      <header className="container mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10 border-b border-white/5 mb-8">
         <Link to="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
-          <img src="https://raw.githubusercontent.com/heil-kaizen/spacedrop/main/spacedrop-wordmark.png" alt="SPACEDROP" className="h-10 mt-1 object-contain" />
+          <img src="https://raw.githubusercontent.com/heil-kaizen/spacedrop/main/spacedrop-wordmark.png" alt="SPACEDROP" className="h-8 md:h-10 mt-1 object-contain" />
         </Link>
-        <div className="flex items-center gap-6">
-          <Link to="/docs" className="font-mono text-sm font-bold tracking-widest text-white hover:text-neutral-300 uppercase transition-colors">
+        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-6">
+          <Link to="/docs" className="font-mono text-xs sm:text-sm font-bold tracking-widest text-white hover:text-neutral-300 uppercase transition-colors">
             Docs
           </Link>
+          <a href="https://x.com/SpaceDroponSOL" target="_blank" rel="noopener noreferrer" className="text-white hover:text-neutral-300 transition-colors">
+            <Twitter className="w-5 h-5 sm:w-5 sm:h-5 fill-current" />
+          </a>
+          <div className="relative group cursor-pointer ml-1 sm:ml-2" onClick={handleCopy}>
+            <div className="absolute inset-0 bg-white/20 rounded-full blur-md group-hover:bg-white/30 transition-all"></div>
+            <div className="relative border border-white/20 bg-white/10 backdrop-blur-md px-3 py-1.5 sm:px-4 sm:py-2 rounded-full flex items-center gap-2 hover:bg-white/20 transition-colors">
+              <span className="font-mono text-[10px] sm:text-xs font-bold text-white tracking-widest uppercase">
+                {copied ? "COPIED" : `CA: ${CONTRACT_ADDRESS.slice(0, 4)}...${CONTRACT_ADDRESS.slice(-4)}`}
+              </span>
+              <Copy className="w-3 h-3 text-neutral-300" />
+            </div>
+          </div>
         </div>
       </header>
 
@@ -137,14 +149,6 @@ export function Home() {
                 </div>
               </div>
 
-              <div className="p-4 border-t border-white/10 bg-white/5 flex items-center justify-between mt-auto gap-4">
-                <div className="font-mono text-xs truncate">
-                  CA: <span className="text-white">{CONTRACT_ADDRESS}</span>
-                </div>
-                <Button variant="ghost" size="sm" onClick={handleCopy} className="shrink-0 h-8 font-mono text-xs px-3">
-                  {copied ? "COPIED!" : "COPY"}
-                </Button>
-              </div>
             </Card>
           </div>
         </section>
