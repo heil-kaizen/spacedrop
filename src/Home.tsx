@@ -6,7 +6,7 @@ import { Button } from "./components/ui/button";
 import { Starfield } from "./components/Starfield";
 import { cn } from "./utils";
 
-const CONTRACT_ADDRESS = "FB2W73DapKJwqscJ4pLZn2CyYrgMrWsafSoRbD7hpump";
+const CONTRACT_ADDRESS = "coming soon";
 
 interface TokenData {
   priceUsd?: string;
