@@ -60,9 +60,7 @@ export function Home() {
   return (
     <div className="min-h-screen bg-transparent text-neutral-300 font-sans selection:bg-white/30 relative overflow-hidden">
       <Starfield />
-      {/* Space Background Effects */}
-      <div className="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-blue-900/20 blur-[150px] rounded-full pointer-events-none z-0" />
-      <div className="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-purple-900/20 blur-[150px] rounded-full pointer-events-none z-0" />
+      {/* Space Background Effects Removed */}
 
 
       {/* Header */}
@@ -100,7 +98,7 @@ export function Home() {
 
             <div className="flex flex-wrap gap-4 pt-6">
               <a href={`https://raydium.io/swap/?outputCurrency=${CONTRACT_ADDRESS}`} target="_blank" rel="noopener noreferrer">
-                <Button className="h-14 px-8 font-black uppercase tracking-widest text-sm group font-mono bg-white text-black hover:bg-neutral-200 cursor-pointer">
+                <Button className="h-14 px-8 font-black uppercase tracking-widest text-sm group font-mono bg-white text-[#0b0913] hover:bg-neutral-200 cursor-pointer">
                    Buy $SPACEDROP
                    <Rocket className="w-5 h-5 ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </Button>
@@ -116,7 +114,7 @@ export function Home() {
           </div>
 
           <div className="relative">
-            <Card className="p-1 aspect-square md:aspect-auto md:h-[500px] flex flex-col justify-between border-neutral-800 bg-black/50 backdrop-blur-xl">
+            <Card className="p-1 aspect-square md:aspect-auto md:h-[500px] flex flex-col justify-between border-white/10 bg-white/5 backdrop-blur-xl">
               <div className="p-6">
                 <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest mb-8 border-b border-white/10 pb-4">
                    <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
