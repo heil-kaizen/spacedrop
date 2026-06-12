@@ -68,6 +68,11 @@ export function Home() {
         <Link to="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
           <img src="https://raw.githubusercontent.com/heil-kaizen/spacedrop/main/spacedrop-wordmark.png" alt="SPACEDROP" className="h-10 mt-1 object-contain" />
         </Link>
+        <div className="flex items-center gap-6">
+          <Link to="/docs" className="font-mono text-sm font-bold tracking-widest text-white hover:text-neutral-300 uppercase transition-colors">
+            Docs
+          </Link>
+        </div>
       </header>
 
       <main className="container mx-auto px-6 pb-24 relative z-10">
